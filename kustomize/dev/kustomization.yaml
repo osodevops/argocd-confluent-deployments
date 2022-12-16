@@ -1,8 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../cp-version
+  - ../base/confluent-no-auth-no-tls
 patchesStrategicMerge:
-  - kafka.yaml
-  - schema-registry.yaml
   - zookeeper.yaml
+  - kafka.yaml
